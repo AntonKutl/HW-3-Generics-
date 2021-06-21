@@ -14,11 +14,11 @@ public class Aviary<T> {
     private Map<String, T> map = new HashMap<String, T>();
 
     public void addAnimal(String name, T animal, AviarySize size) {
-        if (sizeAviary == size) {
+        if (sizeAviary.getValue() >= size.getValue()) {
             map.put(name, animal);
             System.out.println(name + " добавлено");
         } else {
-            System.out.println("Вольер не подходит для " + name);
+            System.out.println("Вольер мал для " + name);
         }
     }
 
