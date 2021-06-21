@@ -11,7 +11,7 @@ public class Aviary<T> {
         this.sizeAviary = sizeAviary;
     }
 
-    Map<String, T> map = new HashMap<String, T>();
+    private Map<String, T> map = new HashMap<String, T>();
 
     public void addAnimal(String name, T animal, AviarySize size) {
         if (sizeAviary == size) {
